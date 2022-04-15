@@ -1,3 +1,24 @@
+"""
+    Copyright (C) 2022 Dramorak
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+
+"""
+
+#TODO implement ufuncs to increase performance
+
 from PIL import Image
 import numpy as np
 
@@ -46,4 +67,4 @@ def pixelfy(im_path, out_path, palette):
 if __name__ == '__main__':
     palette1 = [(254,0,0),(1,255,1),(0,0,255)]
     palette2 = [(0,0,0), (128,128,128), (255,255,255)]
-    pixelfy(r"C:\Users\dramo\Dram's programs\Python\image processing\fuji.jpg", r"C:\Users\dramo\Dram's programs\Python\image processing\fujipixel.jpg", palette1)
+    %timeit pixelfy(r"C:\Users\dramo\Dram's programs\Python\image processing\fuji.jpg", r"C:\Users\dramo\Dram's programs\Python\image processing\fujipixel.jpg", palette1)
